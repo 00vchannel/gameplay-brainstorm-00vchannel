@@ -1,35 +1,37 @@
 # Gameplay Brainstorm 00vchannel
 
-A beginner-friendly Agent Skill for turning incomplete game ideas into distinct, testable gameplay designs.
+Gameplay Brainstorm 00vchannel helps turn a rough game idea into gameplay that you can compare, prototype, and test.
 
-It helps people explore mechanics, modes, core loops, resources, progression, encounters, cooperative rules, paper prototypes, and playtests without requiring game-design terminology or technical implementation knowledge.
+You do not need to know game-design terminology or arrive with a finished brief. Start with a mechanic, a problem, or even a one-sentence idea. The skill asks only for the missing information that would change the design, then helps you work through genuinely different directions instead of reskinning the same loop.
 
-## What it does
+It works with digital games, tabletop games, and paper prototypes.
 
-- Reads the context you already provided before asking questions.
-- Asks one focused batch of three to five design-changing questions when important information is missing.
-- Offers clear options and a recommended default when you are unsure.
-- Produces at least three materially distinct gameplay directions during open exploration.
-- Distinguishes new modes from cosmetic or content-only variants.
-- Turns a selected direction into the minimum rules needed for a useful prototype.
-- Separates known facts, assumptions, hypotheses, and actual player evidence.
-- Defines the smallest test capable of exposing evidence against the riskiest gameplay hypothesis.
+## How it helps
 
-It does not require a particular output language. The agent should follow the language and context of the conversation.
+- Reads the context you have already provided before asking questions.
+- Asks one short batch of focused questions when important details are missing.
+- Gives clear options and a recommended default when you are unsure.
+- Develops at least three distinct gameplay directions during open exploration.
+- Separates a true new mode from a content-only or cosmetic variant.
+- Reduces a chosen direction to the rules needed for a useful first test.
+- Keeps facts, assumptions, hypotheses, and player evidence separate.
+- Finds the smallest test that could reveal a problem with the riskiest hypothesis.
+
+The skill does not require a particular output language. It follows the language and context of the conversation.
 
 ## Install
 
-### Install for all five supported agents
+### Install for Cursor, OpenCode, Claude Code, Codex, and ZCode
 
 ```sh
 npx skills add 00vchannel/gameplay-brainstorm-00vchannel --skill gameplay-brainstorm-00vchannel -g -a cursor -a opencode -a claude-code -a codex -a zcode
 ```
 
-This installs the skill globally for Cursor, OpenCode, Claude Code, Codex, and ZCode.
+This installs the skill globally for all five agents.
 
 ### Install for one agent
 
-Replace the final agent name as needed:
+Use the matching agent name:
 
 ```sh
 npx skills add 00vchannel/gameplay-brainstorm-00vchannel --skill gameplay-brainstorm-00vchannel -g -a cursor
@@ -39,7 +41,7 @@ npx skills add 00vchannel/gameplay-brainstorm-00vchannel --skill gameplay-brains
 npx skills add 00vchannel/gameplay-brainstorm-00vchannel --skill gameplay-brainstorm-00vchannel -g -a zcode
 ```
 
-Omit `-g` for a project-level installation. Omit all `-a` options to let the installer detect available agents and ask where to install the skill.
+Leave out `-g` to install it only for the current project. Leave out the `-a` options to let the installer detect your available agents and ask where the skill should go.
 
 ### Update or remove
 
@@ -50,7 +52,7 @@ npx skills remove gameplay-brainstorm-00vchannel -g
 
 ## Manual installation
 
-Copy the complete `skills/gameplay-brainstorm-00vchannel` directory into the appropriate skill directory. Keep `SKILL.md`, `agents/`, and `references/` together.
+Copy the complete `skills/gameplay-brainstorm-00vchannel` directory into your agent's skill directory. Keep `SKILL.md`, `agents/`, and `references/` together.
 
 | Agent | Global skill directory |
 | --- | --- |
@@ -60,44 +62,44 @@ Copy the complete `skills/gameplay-brainstorm-00vchannel` directory into the app
 | Codex | `~/.codex/skills/` |
 | ZCode | `~/.zcode/skills/` |
 
-For project-level installation, use the agent's project skill directory instead of its global directory.
+For a project-level installation, use that agent's project skill directory instead.
 
-After a manual ZCode installation, open **Settings > Skills**, select **Refresh**, confirm that the skill is enabled, and invoke it with `$gameplay-brainstorm-00vchannel`.
+After installing manually in ZCode, open **Settings > Skills**, select **Refresh**, and make sure the skill is enabled.
 
-## Use
+## Use it
 
-Explicitly invoke the skill and describe an idea or gameplay problem:
+Invoke the skill and describe the idea or problem you want to explore:
 
 ```text
 Use $gameplay-brainstorm-00vchannel to ask me a few focused questions, then turn my gameplay idea into distinct, testable directions.
 ```
 
-You can start with an incomplete idea. For example:
+A rough starting point is enough:
 
 ```text
 $gameplay-brainstorm-00vchannel I want a cooperative game about operating a failing space station, but I do not know what players should do moment to moment.
 ```
 
-When automatic skill matching is supported and enabled, relevant gameplay-design requests may also activate the skill without an explicit mention.
+Agents that support automatic skill matching may also activate it for relevant gameplay-design requests without an explicit mention.
 
-## Workflow
+## What happens during a session
 
-The skill adapts to the current design stage:
+The skill adjusts to the stage of the work:
 
-1. **Initial exploration** — fill important gaps and develop distinct directions.
-2. **Direction comparison** — compare player experience, reuse, new work, and risk.
-3. **Detailed design** — define only the rules required to make the chosen direction playable or testable.
-4. **Playtest analysis** — update hypotheses and next decisions using actual observations or data.
+1. **Initial exploration:** fill the important gaps and develop distinct directions.
+2. **Direction comparison:** compare the player experience, reuse, new work, and risk.
+3. **Detailed design:** define only the rules needed to make the chosen direction playable or testable.
+4. **Playtest analysis:** use observations or data to update the hypotheses and choose the next decision.
 
-## Boundaries
+## What it does not cover
 
-This skill is for gameplay design and early validation. Pure narrative, general UI work, monetization, code implementation, and dedicated numerical balancing of an existing system are outside its main scope.
+This is a gameplay-design and early-validation skill. Pure narrative work, general UI design, monetization, code implementation, and dedicated numerical balancing of an existing system fall outside its main scope.
 
-Untested concepts are treated as hypotheses. The skill must not describe them as proven fun, effective, or validated.
+It also treats untested concepts as hypotheses. It will not describe an idea as proven fun, effective, or validated without player evidence.
 
-## Compatibility note
+## Compatibility
 
-The core package follows the open Agent Skills `SKILL.md` format. The optional `agents/openai.yaml` file provides Codex-specific display metadata and invocation policy; other compatible agents may safely ignore it.
+The package follows the open Agent Skills `SKILL.md` format. `agents/openai.yaml` adds Codex-specific display metadata and invocation policy; other compatible agents can safely ignore it.
 
 ## License
 
