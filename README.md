@@ -2,9 +2,9 @@
 
 Gameplay Brainstorm 00vchannel is an Agent Skill for structured gameplay brainstorming. It helps turn an incomplete idea into materially different playable directions, define the minimum rules needed to examine a chosen direction, and identify what should be tested first.
 
-Its purpose is deliberately narrow. This skill supports brainstorming; using it does not, by itself, improve the quality of a game or its development process. It does not determine whether a concept is fun, feasible, commercially suitable, or worth producing. Those judgments still depend on execution, technical and production constraints, iteration, and evidence from relevant players.
+The skill is designed to make early exploration more focused without requiring game-design terminology. Bring a mechanic, a design problem, or a one-sentence idea; it will help organize the important questions, compare possibilities, and turn a promising direction into a practical next step.
 
-The skill is designed to remain approachable without requiring game-design terminology. It can be used for digital games, tabletop games, and paper prototypes.
+It can be used for digital games, tabletop games, and paper prototypes.
 
 ## What the skill does
 
@@ -96,7 +96,7 @@ A concept is treated as a new mode only when both its primary objective and its 
 
 ## Limits
 
-This is a brainstorming and early gameplay-validation aid, not a complete game-design or production framework. It does not replace design judgment, prototyping, technical assessment, production planning, or playtesting.
+This skill focuses on gameplay brainstorming and early validation. It can make that process more structured, while the quality of the final game still depends on design judgment, execution, production decisions, and playtesting.
 
 Pure narrative development, general UI design, monetization, code implementation, and dedicated numerical balancing of an existing system are outside its main scope.
 
