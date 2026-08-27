@@ -1,0 +1,8 @@
+interface:
+  display_name: "Gameplay Brainstorm 00vchannel"
+  short_description: "Guide beginners from gameplay ideas to testable designs."
+  default_prompt: "Use $gameplay-brainstorm-00vchannel to ask me a few focused questions, then turn my gameplay idea into distinct, testable directions."
+
+policy:
+  allow_implicit_invocation: true
+
