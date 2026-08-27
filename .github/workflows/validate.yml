@@ -1,0 +1,30 @@
+name: Validate Agent Skill
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the Agent Skills reference validator
+        run: pip install "git+https://github.com/agentskills/agentskills.git#subdirectory=skills-ref"
+
+      - name: Validate the skill specification
+        run: skills-ref validate skills/gameplay-brainstorm-00vchannel
+
+      - name: Verify installer discovery
+        run: npx --yes skills add . --list
+
