@@ -69,6 +69,10 @@ After a manual ZCode installation, open **Settings > Skills**, select **Refresh*
 
 ## Usage
 
+### Recommended setup
+
+If your agent provides a Plan or Planning mode, enable it before starting. It gives the conversation more room to clarify assumptions, compare directions, and agree on the next test before implementation begins. The skill still works without this mode.
+
 Invoke the skill and describe the gameplay idea or problem you want to examine:
 
 ```text
